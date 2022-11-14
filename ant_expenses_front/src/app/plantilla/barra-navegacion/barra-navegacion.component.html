@@ -1,0 +1,112 @@
+<!-- Navigation -->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://placeholder.pics/svg/150x50/888888/EEE/Logo"
+        alt="..."
+        height="36"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="transacciones">Transacciones</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Cuentas
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li><a class="dropdown-item" href="cuentas">Cuenta</a></li>
+            <li><a class="dropdown-item" href="tipos-cuentas">Tipos Cuenta</a></li>
+            <li><a class="dropdown-item" href="categorias">Categorias</a></li>
+            <!--<li>
+
+
+
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          <!--</ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>-->
+
+<!-- Dropdown Structure -->
+
+  <nav>
+    <div class="black nav-wrapper">
+      <a routerLink="/imagenes/4.png" class="brand-logo">
+        <img src="imagenes/4.png" height="50" style="vertical-align: middle;" class="circle z-depth-1" >
+      </a>
+      
+      <ul class="right hide-on-med-and-down">
+        
+        <li><a class="nav-link" routerLink="/inicio" >Home</a></li>
+        <li><a routerLink="/seguridad/cambiarClave">Cambiar Clave</a></li>
+
+        
+        <li  *ngIf="sessionIniciada" class="nav-item">
+          <a routerLink="#">Categoria Gastos</a></li>
+          <li  *ngIf="sessionIniciada" class="nav-item">
+            <a routerLink="#">Cuentas</a></li>
+            <li  *ngIf="sessionIniciada" class="nav-item">
+              <a routerLink="#">Tipo Cuentas</a></li>
+              <li  *ngIf="sessionIniciada" class="nav-item">
+                <a routerLink="#">Tipo Operaciones</a></li>
+        <li  *ngIf="sessionIniciada" class="nav-item">
+          <a routerLink="/interfaz/transacciones">transacciones</a></li>
+        <li *ngIf="sessionIniciada" class="nav-item">
+          <a class="nav-link" routerLink="/seguridad/cerrar-session">cerrar Sesión</a></li>
+          <li *ngIf="!sessionIniciada" class="nav-item">
+            <a class="nav-link" routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+        
+          <li  *ngIf="!sessionIniciada" class="nav-item">
+            <a routerLink="#">Recuperar Clave</a></li>
+        
+        <!--<li><a href="#!" class="dropdown-trigger"  data-target="despliegue">
+          opciones
+          <i class="material-icons right">arrow_drop_down</i></a></li>
+        <!-- Dropdown Trigger
+        <ul id="despliegue" class="dropdown-content">
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+       </ul>-->  
+        
+      </ul>
+    </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+
+    </ul>
+
+ 
