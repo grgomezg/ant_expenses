@@ -52,9 +52,10 @@ IdentificarUsuario(){
     console.log(data[1]);
     //almacenar token
     this.servicioSeguridad.almecenar("token",datos);
+    this.servicioSeguridad.AlmacenaSesion(datos);
 
     setTimeout(() =>{
-      this.router.navigate(['/interfaz/transacciones'])
+      this.router.navigate(['/inicio'])
     },3000)
 
     //ok

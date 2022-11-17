@@ -5,12 +5,12 @@ import { EliminarUsuarioComponent } from './rUsuario/eliminar-usuario/eliminar-u
 
 const routes: Routes = [
   {
-    path:'crear-usuario',
+    path:'crearusuario',
     component:CrearUsuarioComponent
 
   },
   {
-    path:'eliminar-usuario',
+    path:'eliminarusuario',
     component:EliminarUsuarioComponent
 
   }

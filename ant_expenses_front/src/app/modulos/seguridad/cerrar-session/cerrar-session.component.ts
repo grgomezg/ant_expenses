@@ -13,6 +13,7 @@ export class CerrarSessionComponent implements OnInit {
     private router : Router) { 
       this.seguridadService.cerrarSession();
     this.router.navigate(['']);
+    alert("A CERRADO SESION CORRECTAMENTE")
     }
 
   ngOnInit(): void {

@@ -45,28 +45,22 @@ export class SeguridadService {
    sessionUsuarioObservable(){
     return this.sessionIniciada.asObservable();
    }
-   /*url = 'http://localhost:3000'
-
-
-  constructor(private http: HttpClient) {
-
+   AlmacenaSesion(datos:ModeloIdentificar){
+    let stringDatos = JSON.stringify(datos);
+    localStorage.setItem("datosSesion", stringDatos)
+   }
+   obtenerInformacionSesion(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);
+      return datos;
+    }else{
+      return null;
+    }
+   }
+   EliminarInformacionSession(){
+    localStorage.removeItem("datosSesion")
    }
    
-   Identificar(email: string, clave: string):Observable<ModeloIdentificar>{
-    return this.http.post<ModeloIdentificar>('${this.url}/login',{
-      email : email,
-      clave : clave,
-      
-      
-      
-    },{
-      headers:new HttpHeaders({
-        
-
-      })
-      
-    })
-    
-   }*/
 
 }

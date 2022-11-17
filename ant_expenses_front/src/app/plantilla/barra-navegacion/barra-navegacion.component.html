@@ -64,32 +64,35 @@
   <nav>
     <div class="black nav-wrapper">
       <a routerLink="/imagenes/4.png" class="brand-logo">
-        <img src="imagenes/4.png" height="50" style="vertical-align: middle;" class="circle z-depth-1" >
+        <img src="/imagenes/4.png" height="50" style="vertical-align: middle;" class="circle z-depth-1" >
       </a>
       
       <ul class="right hide-on-med-and-down">
         
         <li><a class="nav-link" routerLink="/inicio" >Home</a></li>
+        <li  *ngIf="!sessionIniciada" class="nav-item">
+          <a routerLink="/usuario/crearusuario">registrar usuario</a></li>
         <li><a routerLink="/seguridad/cambiarClave">Cambiar Clave</a></li>
 
         
         <li  *ngIf="sessionIniciada" class="nav-item">
-          <a routerLink="#">Categoria Gastos</a></li>
+          <a routerLink="/interfaz/categoriaGastos">Categoria Gastos</a></li>
           <li  *ngIf="sessionIniciada" class="nav-item">
-            <a routerLink="#">Cuentas</a></li>
+            <a routerLink="/interfaz/cuentas">Cuentas</a></li>
             <li  *ngIf="sessionIniciada" class="nav-item">
-              <a routerLink="#">Tipo Cuentas</a></li>
+              <a routerLink="/interfaz/tipoCuentas">Tipo Cuentas</a></li>
               <li  *ngIf="sessionIniciada" class="nav-item">
-                <a routerLink="#">Tipo Operaciones</a></li>
+                <a routerLink="/interfaz/tipoOperaciones">Tipo Operaciones</a></li>
         <li  *ngIf="sessionIniciada" class="nav-item">
           <a routerLink="/interfaz/transacciones">transacciones</a></li>
         <li *ngIf="sessionIniciada" class="nav-item">
           <a class="nav-link" routerLink="/seguridad/cerrar-session">cerrar Sesión</a></li>
-          <li *ngIf="!sessionIniciada" class="nav-item">
-            <a class="nav-link" routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+          
         
           <li  *ngIf="!sessionIniciada" class="nav-item">
             <a routerLink="#">Recuperar Clave</a></li>
+            <li *ngIf="!sessionIniciada" class="nav-item">
+              <a class="nav-link" routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
         
         <!--<li><a href="#!" class="dropdown-trigger"  data-target="despliegue">
           opciones
