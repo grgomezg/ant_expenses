@@ -5,6 +5,7 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
 import { RUsuarioComponent } from './r-usuario/r-usuario.component';
 import { CrearUsuarioComponent } from './rUsuario/crear-usuario/crear-usuario.component';
 import { EliminarUsuarioComponent } from './rUsuario/eliminar-usuario/eliminar-usuario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { EliminarUsuarioComponent } from './rUsuario/eliminar-usuario/eliminar-u
   ],
   imports: [
     CommonModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UsuarioModule { }

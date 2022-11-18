@@ -8,8 +8,15 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">email</i>
-                            <input formControlName="usuario" type="email" id="email" class="validate" placeholder="Digite su correo electronico"/>
-                            <label for="email">Usuario</label>
+                            <input formControlName="usuario" type="email" id="email" class="validate" placeholder="Digite un correo electronico"/>
+                            <label for="email">Email</label>
+                            <span *ngIf="this.fgValidador.get('usuario')?.errors?.['required']" style="color:red ;">
+                                (el email no puede quedar vacio)</span>
+                                <span *ngIf="this.fgValidador.get('usuario')?.errors?.['email']" style="color:red ;">
+                                    (Debe tener un email valido)</span>
+                                    <span *ngIf="this.fgValidador.get('usuario')?.errors?.['minlength']" style="color:red ;">
+                                        (Debe tener como minimo 10 caracteres)</span>
+
                         </div>
                     </div>
                     <div class="row">
@@ -17,6 +24,13 @@
                             <i class="material-icons prefix">vpn_key</i>
                             <input formControlName="clave" type="password" id="clave" class="validate" placeholder="Digite su clave"/>
                             <label for="email">Contraseña</label>
+                            <span *ngIf="this.fgValidador.get('clave')?.errors?.['required']" style="color:red ;">
+                                (la clave no puede quedar vacia)</span>
+                                <span *ngIf="this.fgValidador.get('clave')?.errors?.['maxlength']" style="color:red ;">
+                                    (Debe tener maximo 25 caracteres)</span>
+                                    <span *ngIf="this.fgValidador.get('clave')?.errors?.['minlength']" style="color:red ;">
+                                        (Debe tener como minimo 6 caracteres)</span>
+
                         </div>
                     </div>
                     <div class="row center-align">

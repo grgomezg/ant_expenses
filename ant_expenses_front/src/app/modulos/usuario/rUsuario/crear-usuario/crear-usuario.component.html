@@ -1,54 +1,65 @@
-
-
 <div class="container">
     <div class="row card-panel ">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="well well-sm">
-                
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+
                     <fieldset>
                         <legend class="text-center header">Registro Usuario</legend>
+                        <form [formGroup]="fgvalidador" (ngSubmit)="guardarUsuario()">
 
-                        
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
+
+                            <div class="form-group">
+
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+
+                                    <input id="nombre" formControlName="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control">
+                                    <span *ngIf="this.fgvalidador.get('nombre')?.errors?.['required']">
+                                        (el nombre no puede quedar vacio)</span>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="apellido" formControlName="apellido" name="apellido" type="text" placeholder="Apellido" class="form-control">
+                                    <span *ngIf="this.fgvalidador.get('apellido')?.errors?.['required']">
+                                        (el apellido no puede quedar vacio)</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="email" formControlName="email" name="email" type="text" placeholder="Email" class="form-control">
+                                    <span *ngIf="this.fgvalidador.get('email')?.errors?.['required']">
+                                        (el email no puede quedar vacio)</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="phone" name="phone" type="password" placeholder="password" class="form-control">
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="clave" formControlName="clave" name="clave" type="password" placeholder="password" class="form-control">
+                                    <span *ngIf="this.fgvalidador.get('clave')?.errors?.['required']">
+                                        (la clave no puede quedar vacia)</span>
+                                </div>
                             </div>
-                        </div>
 
-                       
 
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Registrarce
+
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button [disabled]="!fgvalidador.valid" type="submit" class="btn btn-primary btn-lg">Registrarce
                                     <i class="material-icons right">send</i>
                                 </button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </fieldset>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 </div>
