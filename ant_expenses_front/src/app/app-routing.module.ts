@@ -1,40 +1,51 @@
+import { TipoCuentasComponent } from './modulos/interfaz/tipo-cuentas/tipo-cuentas.component';
+import { CuentasComponent } from './modulos/interfaz/cuentas/cuentas.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+//componentes
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 
 const routes: Routes = [
+  { path: 'cuentas', component: CuentasComponent },
+  {path: 'tipos-cuentas',component:TipoCuentasComponent},
+
   {
-    path:"inicio",
-    component: InicioComponent
+    path: 'inicio',
+    component: InicioComponent,
   },
   {
-    path:"",
+    path: '',
     pathMatch: 'full',
-    redirectTo: '/inicio'
-
+    redirectTo: '/inicio',
   },
   {
     path: 'seguridad',
-    loadChildren: () => import("./modulos/seguridad/seguridad.module").then(x => x.SeguridadModule)
+    loadChildren: () =>
+      import('./modulos/seguridad/seguridad.module').then(
+        (x) => x.SeguridadModule
+      ),
   },
   {
     path: 'interfaz',
-    loadChildren: () => import("./modulos/interfaz/interfaz.module").then(x => x.InterfazModule)
+    loadChildren: () =>
+      import('./modulos/interfaz/interfaz.module').then(
+        (x) => x.InterfazModule
+      ),
   },
   {
     path: 'usuario',
-    loadChildren: () => import("./modulos/usuario/usuario.module").then(x => x.UsuarioModule)
+    loadChildren: () =>
+      import('./modulos/usuario/usuario.module').then((x) => x.UsuarioModule),
   },
   {
     path: '**',
-    component: ErrorComponent
-  }
-
+    component: ErrorComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
