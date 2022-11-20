@@ -7,6 +7,9 @@ import { CuentasComponent } from './cuentas/cuentas.component';
 import { TipoOperacionesComponent } from './tipo-operaciones/tipo-operaciones.component';
 import { TipoCuentasComponent } from './tipo-cuentas/tipo-cuentas.component';
 import { CategoriaGastosComponent } from './categoria-gastos/categoria-gastos.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EliminarcuentasComponent } from './cuentas/eliminarcuentas/eliminarcuentas.component';
+import { EditarcuentasComponent } from './cuentas/editarcuentas/editarcuentas.component';
 
 
 @NgModule({
@@ -15,11 +18,15 @@ import { CategoriaGastosComponent } from './categoria-gastos/categoria-gastos.co
     CuentasComponent,
     TipoOperacionesComponent,
     TipoCuentasComponent,
-    CategoriaGastosComponent
+    CategoriaGastosComponent,
+    EliminarcuentasComponent,
+    EditarcuentasComponent
   ],
   imports: [
     CommonModule,
-    InterfazRoutingModule
+    InterfazRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class InterfazModule { }
