@@ -1,7 +1,7 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Component, OnInit } from '@angular/core';
-import { RouteConfigLoadEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-tipo-cuentas',
