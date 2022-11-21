@@ -1,5 +1,4 @@
-import { TipoCuentasComponent } from './modulos/interfaz/tipo-cuentas/tipo-cuentas.component';
-import { CuentasComponent } from './modulos/interfaz/cuentas/cuentas.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 //componentes
@@ -7,13 +6,9 @@ import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 
 const routes: Routes = [
-  { path: 'cuentas', component: CuentasComponent },
-  {path: 'tipos-cuentas',component:TipoCuentasComponent},
 
-  {
-    path: 'inicio',
-    component: InicioComponent,
-  },
+
+  { path: 'inicio', component: InicioComponent },
   {
     path: '',
     pathMatch: 'full',

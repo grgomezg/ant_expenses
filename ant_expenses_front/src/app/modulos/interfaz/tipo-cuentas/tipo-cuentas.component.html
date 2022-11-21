@@ -1,37 +1,30 @@
-
-
-
-
 <div class="container mt-5">
-  <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-md-8">
-          <form id="regForm">
-              <h1 id="register">Crear cuenta</h1>
-
-
-              <div class="tab">
-                <h6>Nombre de la cuenta?</h6>
-                  <p>
-                    <input placeholder="Cuenta" oninput="this.className = ''" name="fname"></p>
-
-              </div>
-      <div id="nombrelHelp" class="form-text">
-        El tipo de cuenta se refiere a como podemos agrupar cuentas
-        Ejemplo:Préstamos, Tarjetas de crédito, etc
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo"> Crear Tipo de cuenta</span>
+          <form [formGroup]="cuentaForm" class="mt-5" (ngSubmit)="crearCuenta()">
+            <div class="mb-3">
+              <input
+                type="text"
+                formControlName="cuentatipo"
+                class="form-control"
+                placeholder="Ejemplo:Préstamos, Tarjetas de crédito"
+              />
             </div>
-
-              <button type="submit" class="btn btn-primary  mt-3 mb-5">Crear</button>
-
-
+            <div class="mb-3">
+              <button
+                routerLink="/interfaz/cuentas"
+                class="btn btn-secondary float-start"
+              >
+                Cuentas
+              </button>
+              <button type="submit" [disabled]="!cuentaForm.valid" class="btn btn-primary float-end">Aceptar</button>
+            </div>
           </form>
+        </div>
       </div>
+    </div>
   </div>
 </div>
-
-
-
-
-
-
-
-

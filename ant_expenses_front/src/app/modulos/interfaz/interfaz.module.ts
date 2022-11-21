@@ -7,7 +7,7 @@ import { CuentasComponent } from './cuentas/cuentas.component';
 import { TipoOperacionesComponent } from './tipo-operaciones/tipo-operaciones.component';
 import { TipoCuentasComponent } from './tipo-cuentas/tipo-cuentas.component';
 import { CategoriaGastosComponent } from './categoria-gastos/categoria-gastos.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,8 @@ import { CategoriaGastosComponent } from './categoria-gastos/categoria-gastos.co
     CuentasComponent,
     TipoOperacionesComponent,
     TipoCuentasComponent,
-    CategoriaGastosComponent
+    CategoriaGastosComponent,
   ],
-  imports: [
-    CommonModule,
-    InterfazRoutingModule
-  ]
+  imports: [CommonModule, InterfazRoutingModule, ReactiveFormsModule],
 })
-export class InterfazModule { }
+export class InterfazModule {}

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pie-pagina.component.css'],
 })
 export class PiePaginaComponent implements OnInit {
+  
   constructor() {}
 
   ngOnInit(): void {}

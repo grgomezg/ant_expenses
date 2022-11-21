@@ -1,3 +1,4 @@
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +8,7 @@ import { BarraNavegacionComponent } from './plantilla/barra-navegacion/barra-nav
 import { PiePaginaComponent } from './plantilla/pie-pagina/pie-pagina.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,17 @@ import {HttpClientModule} from '@angular/common/http'
     BarraNavegacionComponent,
     PiePaginaComponent,
     InicioComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

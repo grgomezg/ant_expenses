@@ -8,30 +8,28 @@ import { TransaccionesComponent } from './transacciones/transacciones.component'
 
 const routes: Routes = [
   {
-    path:"transacciones",
-    component: TransaccionesComponent
+    path: 'transacciones',
+    component: TransaccionesComponent,
   },
   {
-    path:"categoriaGastos",
-    component: CategoriaGastosComponent
+    path: 'categoriaGastos',
+    component: CategoriaGastosComponent,
   },
   {
-    path:"cuentas",
-    component: CuentasComponent
+    path: 'cuentas',
+    component: CuentasComponent,
   },
+
   {
-    path:"tipoCuentas",
-    component: TipoCuentasComponent
+    path: 'tipoOperaciones',
+    component: TipoOperacionesComponent,
   },
-  {
-    path:"tipoOperaciones",
-    component: TipoOperacionesComponent
-  },
-  
+  {path: 'tipoCuentas', component:TipoCuentasComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class InterfazRoutingModule { }
+export class InterfazRoutingModule {}
